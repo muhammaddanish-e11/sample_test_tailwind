@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-
+const keys = ["0","1","2","3","4","5","6","7","8","9"]
 // Connects to data-controller="user-data"
 export default class extends Controller {
   static targets = ["phoneNumber", "emailAddress", "emailError", "phoneError", "firstName", "firstNameError", "lastName", "lastNameError"]
@@ -8,7 +8,14 @@ export default class extends Controller {
 
   }
 
-  formatPhoneNumber() {
+  formatPhoneNumber(e) {
+
+    let value = this.phoneNumberTarget.value.length > 1 ? this.phoneNumberTarget.value.slice(-1) : this.phoneNumberTarget.value
+    if (!keys.includes(value)) {
+      if (this.phoneNumberTarget.value.slice("-1") != "-") {
+        this.phoneNumberTarget.value = this.phoneNumberTarget.value.slice(0, -1);
+      }
+    }
 
     if ([3,7].includes(this.phoneNumberTarget.value.length)) {
       this.phoneNumberTarget.value += "-"

@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "user_data" do %>
-  <%= form_for(@user, url: users_path , data:{ controller: "user-data" }) do |form| %>
+  <%= form_for(User.new, url: users_path , data:{ controller: "user-data" }) do |form| %>
     <section class="fixed top-0 left-0 right-0 bottom-0 flex items-center w-full h-full p-4 bg-coolGray-800 bg-opacity-80 overflow-y-auto bg-gray-700">
       <div class="max-w-lg w-full m-auto p-8 bg-white rounded-md">
         <ul class="flex flex-wrap -m-1.5 justify-end mb-2">
@@ -81,9 +81,7 @@
 
         <div class="flex -m-2">
           <div class="w-full p-2">
-            <button class="flex flex-wrap justify-center w-full px-4 py-2.5 bg-white font-medium text-base text-coolGray-500 hover:text-coolGray-600 border border-coolGray-200 hover:border-coolGray-300 rounded-md shadow-button">
-              <p>Cancel</p>
-            </button>
+            <%= link_to 'Cancel', root_path, { class: "flex flex-wrap justify-center w-full px-4 py-2.5 bg-white font-medium text-base text-coolGray-500 hover:text-coolGray-600 border border-coolGray-200 hover:border-coolGray-300 rounded-md shadow-button", data: {target: "_top"} } %>
           </div>
           <div class="w-full p-2">
             <button class="flex flex-wrap justify-center w-full px-4 py-2.5 font-medium text-base text-white border rounded-md shadow-button bg-orange-500 border-orange-500 hover:bg-orange-600" type="button"

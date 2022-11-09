@@ -3,14 +3,13 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="employment"
 export default class extends Controller {
-  static targets = ["dateStarted", "dateEnded"]
+  static targets = ["dateStarted", "dateEnded", "startedDateError", "dateEndedError"]
 
   connect() {
-    $("#dateStarted").datepicker()
-    $("#dateEnded").datepicker()
   }
 
-  validateDate(e) {
-    debugger
+  validateForm() {
+
   }
+
 }

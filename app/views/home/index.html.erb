@@ -1,3 +1,23 @@
-<%= turbo_frame_tag "user_data" do %>
-  <%= link_to 'Edit this todo', new_user_path, data:{turbo_frame:"test"}%>
-<% end %>
+<section class="w-full p-4">
+  <section class="pt-24 pb-28 bg-white overflow-hidden">
+    <div class="container px-4 mx-auto">
+      <div class="text-center max-w-lg mx-auto">
+        <h4 class="mb-5 text-4xl md:text-5xl font-bold font-heading text-center tracking-px-n leading-tight">Create User Account</h4>
+        <div class="mb-11 md:inline-block">
+          <div class="flex flex-wrap justify-end -m-2">
+            <div class="w-full md:w-1/2 p-2">
+              <%= turbo_frame_tag "user_data" do %>
+                <%= link_to 'Personal Data', new_user_path, class:"flex flex-wrap justify-center w-full px-15 py-3 bg-white font-medium text-base text-coolGray-500 hover:text-coolGray-600 border border-coolGray-200 hover:border-coolGray-300 rounded-xl shadow-button text-xl hover:bg-orange-500 hover:text-white font-semibold" %>
+              <% end %>
+            </div>
+            <div class="w-full p-2 md:w-1/2">
+              <button type="submit" class="flex flex-wrap justify-center w-full px-6 py-3 font-medium text-base text-white border rounded-xl shadow-button bg-gray-300 text-xl hover:bg-gray-600 font-semibold">
+                <p>Employment</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
