@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "user_data" do %>
-  <%= form_for(@user, url: employments_path , data:{ controller: "employment" }) do |form| %>
+  <%= form_for(@user, url: employments_path , data:{ controller: "employment test" }) do |form| %>
     <section class="fixed top-0 left-0 right-0 bottom-0 flex items-center w-full h-full p-4 bg-coolGray-800 bg-opacity-80 overflow-y-auto bg-gray-700">
       <div class="max-w-lg w-full m-auto p-8 bg-white rounded-md">
         <ul class="flex flex-wrap -m-1.5 justify-end mb-2">
@@ -31,8 +31,8 @@
             <div class="flex flex-wrap -m-3 mb-2 pr-2">
               <div class="w-full md:flex-1 p-3">
                 <p class="mb-1.5 font-medium text-coolGray-800 text-sm text-gray-600">Started Date</p>
-                <%= employment.text_field :date_started, { title: "d/m/Y", class:"IP_calendar w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input h-10 border-gray-200",
-                  data:{ employment_target:"dateStarted",action:"input->employment#focusFirstName"} } %>
+                <%= employment.text_field :date_started, { id:"dateStarted", class:"IP_calendar w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input h-10 border-gray-200",
+                  data:{ employment_target:"dateStarted",action:"blur->employment#validateDate"} } %>
                 <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
                 <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
                 <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
