@@ -17,7 +17,6 @@ export default class extends Controller {
 
   validatePhoneNumber() {
     let phoneNumber = this.phoneNumberTarget.value
-    debugger
     if (phoneNumber && !(phoneNumber.length <=12) ) {
       this.phoneErrorTarget.classList.remove("hidden")
     } else {
