@@ -5,7 +5,7 @@ class EmploymentsController < ApplicationController
   def new; end
 
   def create
-    if User.create(user_params)
+    if User.create(required_params)
       redirect_to root_path
     else
       redirect_to root_path
