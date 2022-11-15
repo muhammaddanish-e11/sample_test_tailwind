@@ -5,15 +5,15 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.1.2
 
-* System dependencies
+* Rails version 7.0.4
 
 * Configuration
 
-* Database creation
+* Database postgresql
 
-* Database initialization
+* Database create rails db:migrate
 
 * How to run the test suite
 
