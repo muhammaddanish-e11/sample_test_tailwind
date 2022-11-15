@@ -5,8 +5,11 @@ class EmploymentsController < ApplicationController
   def new; end
 
   def create
-    @user = User.create(user_params)
-    redirect_to root_path
+    if User.create(user_params)
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private

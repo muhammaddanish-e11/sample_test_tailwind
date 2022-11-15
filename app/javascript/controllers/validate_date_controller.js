@@ -5,14 +5,14 @@ export default class extends Controller {
   static targets = ["dateField", "dateError"]
 
   connect() {
-    $(".js-date").datepicker({ format: "dd/mm/yyyy" })
   }
 
   validateDate(e) {
     let date = this.dateFieldTarget.value
 
-    if (date && ( date.length < 10 )) {
+    if (date && ( date.length != 10 )) {
       this.dateFieldTarget.value = ""
+      this.dateErrorTarget.classList.remove("hidden")
 
     } else if (date && (!this.isValidDate(date))) {
       this.dateFieldTarget.value = ""
@@ -27,10 +27,4 @@ export default class extends Controller {
     return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
   }
 
-  formatDate(e) {
-    let date = this.dateFieldTarget
-    if ([2,5].includes(date.value.length)) {
-      date.value += "/"
-    }
-  }
 }
