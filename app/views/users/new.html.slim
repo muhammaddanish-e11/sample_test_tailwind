@@ -29,7 +29,7 @@
               p.mb-1.5.font-medium.text-coolGray-800.text-sm.text-gray-600
                 | First Name
               = form.text_field :first_name, { class:"w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input h-10 border-gray-200",
-                placeholder:"", data:{ user_data_target:"firstName",action:"input->user-data#focusFirstName"} }
+                placeholder:"", maxlength: "25", data:{ user_data_target:"firstName",action:"input->user-data#focusFirstName"} }
               div[data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"]
               div[data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"]
               div[data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"]
@@ -40,7 +40,7 @@
               p.mb-1.5.font-medium.text-coolGray-800.text-sm.text-gray-600
                 | Last Name
               = form.text_field :last_name, { class:"w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input h-10 border-gray-200",
-                placeholder:"", data:{ user_data_target:"lastName",action:"input->user-data#focusLastName"} }
+                placeholder:"", maxlength: "50", data:{ user_data_target:"lastName",action:"input->user-data#focusLastName"} }
               div[data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"]
               div[data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"]
               div[data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"]
